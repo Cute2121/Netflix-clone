@@ -1,0 +1,44 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none; /* will keep scrollbar at x axis but will but the scrollbar wont be visible 888*/
+}
+
+.row-poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms; /* if images ever changes size(mean performs TRANSFORM ) it will do it in a given time intervall
+  TRANSITION = is used to give the time in which the transformation changes will take place */
+  /* for using TRANSITION the image will grow slowly in the given time intervall above . */
+  /* without the TRANSITION the image will grow suddenly like qa snap so to make it grow slowly we use TRANSITION */
+}
+
+.row-poster:hover {
+  transform: scale(
+    1.08
+  ); /* TRANSFORM = is used to grow or shrink the image/div/button/etc for that we have to give SCALE() where the value in () if it goes below 1 it will shrink while if it goes above 1 it will grow */
+}
+
+.row-posterLarge {
+  max-height: 250px;
+}
+
+.row-posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.video {
+  width: 100%;
+}
